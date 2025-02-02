@@ -1,6 +1,0 @@
-# Keep repository language stats focused on backend source code
-src/main/resources/templates/** linguist-detectable=false
-src/main/resources/static/** linguist-detectable=false
-*.html linguist-detectable=false
-*.css linguist-detectable=false
-*.js linguist-detectable=false
