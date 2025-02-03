@@ -1,0 +1,3 @@
+# Force GitHub Linguist to classify repository primarily by Java source
+* linguist-detectable=false
+*.java linguist-detectable=true
