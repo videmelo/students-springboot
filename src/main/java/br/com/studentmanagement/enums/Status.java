@@ -1,4 +1,4 @@
-package br.com.studentmanagement.Enums;
+package br.com.studentmanagement.enums;
 
 public enum Status {
 

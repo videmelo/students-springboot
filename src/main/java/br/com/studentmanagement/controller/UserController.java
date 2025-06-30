@@ -29,7 +29,7 @@ public class UserController {
     @GetMapping("/")
     public ModelAndView login() {
         ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("Login/login");
+        modelAndView.setViewName("login/login");
         modelAndView.addObject("user", new User());
         return modelAndView;
     }
@@ -46,7 +46,7 @@ public class UserController {
     public ModelAndView register() {
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.addObject("user", new User());
-        modelAndView.setViewName("Login/register");
+        modelAndView.setViewName("login/register");
         return modelAndView;
     }
 
@@ -59,11 +59,12 @@ public class UserController {
     }
 
     @PostMapping("/login")
-    public ModelAndView login(@Valid User user, BindingResult br, HttpSession session) throws NoSuchAlgorithmException, ServiceException {
+    public ModelAndView login(@Valid User user, BindingResult br,
+                              HttpSession session) throws NoSuchAlgorithmException, ServiceException {
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.addObject("user", new User());
         if(br.hasErrors()) {
-            modelAndView.setViewName("Login/login");
+            modelAndView.setViewName("login/login");
         }
 
         User userLogin = serviceUser.loginUser(user.getUser(), Util.md5(user.getPassword()));
@@ -82,6 +83,4 @@ public class UserController {
         session.invalidate();
         return login();
     }
-
-
 }

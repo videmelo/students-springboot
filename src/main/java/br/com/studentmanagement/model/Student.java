@@ -1,8 +1,8 @@
 package br.com.studentmanagement.model;
 
-import br.com.studentmanagement.Enums.Course;
-import br.com.studentmanagement.Enums.Status;
-import br.com.studentmanagement.Enums.Shift;
+import br.com.studentmanagement.enums.Course;
+import br.com.studentmanagement.enums.Status;
+import br.com.studentmanagement.enums.Shift;
 import com.sun.istack.NotNull;
 
 import javax.persistence.*;

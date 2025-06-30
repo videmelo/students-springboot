@@ -8,7 +8,6 @@ import br.com.studentmanagement.model.User;
 import br.com.studentmanagement.util.Util;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import java.security.NoSuchAlgorithmException;
 
 @Service
@@ -35,7 +34,6 @@ public class UserService {
 
     public User loginUser(String user, String password) throws ServiceException {
 
-        User userLogin = userRepository.buscarLogin(user, password);
-        return userLogin;
+        return userRepository.buscarLogin(user, password);
     }
 }

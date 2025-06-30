@@ -1,5 +1,7 @@
 package br.com.studentmanagement.exception;
 
+import java.io.Serial;
+
 public class ServiceException extends Exception {
 
     public ServiceException(String message) {
@@ -7,5 +9,6 @@ public class ServiceException extends Exception {
     }
 
 
+    @Serial
     private static final long serialVersionUID = 1L;
 }
